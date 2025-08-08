@@ -1,0 +1,10 @@
+package Day1;
+public class Sum {
+	public static void main(String[] args) {
+	    byte num4=7;
+	    byte num5=7;
+	byte num6=(byte)(num4+num5);
+	System.out.println(num6);
+	}
+}
+
