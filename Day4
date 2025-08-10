@@ -1,0 +1,273 @@
+package Day4;
+public class Loopfor {
+	public static void main(String[] args) {
+		int num=10;
+		for(int i=1;i<10;i++) {
+			System.out.println(i);
+		}
+	}
+}
+
+package Day4;
+public class Evenfor {
+	public static void main(String[] args) {
+         int num=0;
+         for(int i=10;i>=num;i--) {
+        	   System.out.println(i);
+         }
+	}
+}
+
+package Day4;
+import java.util.Scanner;
+public class Factor {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int count=0;
+		for(int i=1;i<=num;i++) {
+			if(num%i==0) {
+				System.out.println("factors=" +i);
+				count++;
+			}
+		}
+		System.out.println("count of factors:"+count);
+	}
+}
+
+
+package Day4;
+import java.util.Scanner;
+public class Factorial {
+	public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   int num=sc.nextInt();
+	   int factorial=1;
+	   int sum=0;
+	   for(int i=num;i>0;i--) {
+		   factorial*=i;
+		   sum=sum+factorial;
+	   }
+	   System.out.println("The factorial of the number is:"+factorial);
+	   System.out.println(sum);
+	}
+
+}
+
+package Day4;
+import java.util.Scanner;
+public class Gcd {
+	public static void main(String[] args) {
+	 Scanner sc=new Scanner(System.in);
+	 int n1=sc.nextInt();
+	 int n2=sc.nextInt();
+	  int gcd=0;
+	  int min=(n1<n2)?n1:n2;
+	  for(int i=min;i>0;i--) {
+		  if(n1%i==0 && n2%i==0) {
+			  gcd=i;
+			  break;
+		  }
+	  } 
+	  System.out.println("GCD :" +gcd);
+	}
+}
+
+package Day4;
+import java.util.*;
+public class Palindrome {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String str=sc.nextLine();
+		String rev = ""; 
+        for(int i = str.length() - 1; i >= 0; i--)
+            rev += str.charAt(i);
+		if(str.equals(rev)) {
+			System.out.println(str + " Palindrome");
+		}
+		else {
+			System.out.println(str + " Not a Palindrome");
+		}	
+		}
+	}
+
+
+package Day4;
+import java.util.Scanner;
+public class Prime {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);;
+		int n=sc.nextInt();
+		int count=0;
+		for(int i=2;i<=n;i++) {
+			if(n%i==0) {
+				System.out.println("factors=" +i);
+				count++;} }
+			if(count==1) {
+				System.out.println("It is prime number");
+			} else {
+				System.out.println("Not a prime number");
+			}
+	}
+}
+
+package Day4;
+public class Reversewhile {
+	public static void main(String[] args) {
+		int num=20;
+		while(num>=0) {
+			System.out.println(num);
+			num--;
+		}
+	}
+}
+
+package Day4;
+import java.util.*;
+public class Reverseofnumber {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int num1=0;
+		while(num>0) {
+			num1=num%10;
+			System.out.print(" "+num1); // rev=rev*10+num1;
+			num=num/10;
+		}
+       // System.out.println(rev);
+	}
+}
+
+package Day4;
+import java.util.*;
+public class Countofdigit {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int sum1=0;
+		int sum2=0;
+		while(  num> 9)
+		{
+			int sum=0;
+		    while (num>0) {
+		    	int temp=num%10;
+		    	sum=sum+temp;
+		    	num=num/10;
+		    }
+		    num=sum;
+		} 
+		  System.out.println(num);	 
+	}
+}
+
+package Day4;
+import java.util.Scanner;
+public class Countofdigit1 {
+	public static void main(String[] args) {
+				Scanner sc=new Scanner(System.in);
+				int num=sc.nextInt();
+				int count=0;
+				int num1=0;
+				while(  num>0)
+				{
+					num=num/10;
+					count++;
+				} System.out.println(count);
+			}}
+
+	ASSIGNMENT
+1.palindrome
+package Assignment4;
+import java.util.*;
+public class Palindrome {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String str=sc.nextLine();
+		String rev = ""; 
+        for(int i = str.length() - 1; i >= 0; i--)
+            rev += str.charAt(i);
+		if(str.equals(rev)) {
+			System.out.println(" Palindrome");
+		}
+		else {
+			System.out.println(" Not a Palindrome");
+		}
+	}}
+2.Fibonacci series
+package Assignment4;
+import java.util.Scanner;
+public class Fibbonacci {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int a=0;
+		int b=1;
+		System.out.print("Fibonacci Series: " + a + " " + b);
+		for(int i=2;i<num;i++) {
+			int c=a+b;
+			System.out.print(" " + c);
+			a=b;
+			b=c;
+		}
+	}
+}
+3.Player score
+package Assignment4;
+import java.util.*;
+public class Playerscore {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int t=sc.nextInt();
+		int y=0,z=0;
+		boolean turn=true;
+		while(t>0) {
+			int p=(turn)?a:b;
+			int q=t;
+			while(q!=0) {
+				int temp=q;
+				q=p%q;
+				p=temp;
+			}
+			if(turn) {
+				y+=p;
+			}else {
+				z+=p;
+			}
+			t-=p;
+			turn=!turn;
+		}
+		System.out.println(y>z?"winner:Gokul":z>y?"winner:Minor":"It is draw.");
+		}
+	}
+
+4.Armstrong number
+package Day5;
+import java.util.*;
+public class Armstrongnumber {
+	public static void main(String[] args) {
+	 Scanner sc=new Scanner(System.in);
+	 int num=sc.nextInt();
+	 int digit=num;
+	 int sum=0;
+	 int count=0;
+	 while(num>0) {
+		 int num1=num%10;
+		count++;
+		 num=num/10;
+	 } while(num>0) {
+		 int num2=num%10; 
+	 }
+	}
+}
+
+
+
+
+
+
+
+	
+
+
