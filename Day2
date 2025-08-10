@@ -1,0 +1,168 @@
+package Day2;
+public class Arithmetic {
+	public static void main(String[] args) {
+		int a=54 ;
+		int num1=a%10;
+		int num2=a/10;
+		System.out.println(num1+num2);
+	}
+}
+
+
+package Day2;
+public class Logical {
+	public static void main(String[] args) {
+        int a=10;
+        int b=20;
+        int c=12;
+        System.out.println(a==10 && b==20);
+        System.out.println(a==12 && b==20);
+        System.out.println(c==12 || a==20);
+        System.out.println(a==12 || b==10);
+        System.out.println(!(a==12 || b==10));
+	}
+}
+
+
+package Day2;
+public class operator1 {
+	public static void main(String[] args) {
+	 int a=220;
+	 int num=a%100;
+	 System.out.println(num);
+	}
+}
+
+
+package Day2;
+public class Assignment {
+	public static void main(String[] args) {
+        int a=10;
+        a+=10;
+        a-=5;
+        System.out.println(a);
+	}
+}
+
+
+package Day2;
+public class Bitwise {
+	public static void main(String[] args) {
+		int num1=27;
+		int num2=32;
+		System.out.println(num1 & num2);
+		System.out.println(num1 | num2);
+		System.out.println(num1 ^ num2);
+		int num3=60;
+		int num4=17;
+		System.out.println(num3 & num4);
+		System.out.println(num3| num4);
+		System.out.println(num3 ^ num4);
+		int num5=15;
+		int num6=47;
+		System.out.println(num5 & num6);
+		System.out.println(num5 | num6);
+		System.out.println(num5 ^ num6);
+		int num7=8;
+		int num8=2;
+		System.out.println(num7 & num8);
+		System.out.println(num7 | num8);
+		System.out.println(num7 ^ num8); 
+		int num9=19;
+		int num10=36;
+		System.out.println(num9 & num10);
+		System.out.println(num9 | num10);
+		System.out.println(num9 ^ num10);
+	}
+}
+
+
+package Day2;
+public class Relation {
+	public static void main(String[] args) {
+		int a=10;
+        int b=20;
+        int c=12;
+        System.out.println(a==b);
+        System.out.println(b<a);
+        System.out.println(a>c);
+        System.out.println(a<=b);
+        System.out.println(c>=b);
+        System.out.println(a!=c);
+	}
+}
+
+
+package Day2;
+public class Shift {
+	public static void main(String[] args) {
+		int a=20;
+		int b=1;
+		System.out.println(a<<b);
+		System.out.println(a>>b);
+	}
+}
+
+
+
+package Day2;
+import java.util.Scanner;
+public class Ternary {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		String str=(num%2==0)?"even":"odd";
+		System.out.println(str);
+	}
+}
+
+
+ASSIGNMENT:
+1. swap using temp variable
+package Assignment1;
+import java.util.Scanner;
+public class Tempswap {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value of a:");
+		int a=sc.nextInt();
+		System.out.println("Enter the value of b:");
+		int b=sc.nextInt();
+	    int temp=a;
+	    a=b;
+	    b=temp;
+		System.out.println("After swapping a= "+a + " b="+b );
+	}
+}
+
+2.swap numbers
+package Assignment1;
+import java.util.Scanner;
+public class swap {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value of a:");
+		int a=sc.nextInt();
+		System.out.println("Enter the value of b:");
+		int b=sc.nextInt();
+	    a =a+b;
+		b=a-b;
+		a=a-b;
+		System.out.println("After swapping a= "+a + " b="+b );
+	}
+}
+
+3.Group the students
+package Assignment1;
+import java.util.Scanner;
+public class group {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num1=sc.nextInt();
+		int num2=sc.nextInt();
+		int num3=num1/num2;
+		int num4=num1%num2;
+		System.out.println("The number of students in each group:" +num3);
+		System.out.println("The remaining students: " +num4);
+	}
+}
