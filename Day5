@@ -181,5 +181,47 @@ public class Solution {
     }
 }   
 
-6.
-    
+6.import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int count=0;
+        int num=2;
+        System.out.println("First "+n+" palindromic prime numbers:");
+        while(count<n){
+            String str=""+num;
+            String rev="";
+            for(int i=str.length()-1;i>=0;i--) 
+                rev+=str.charAt(i);
+            if(str.equals(rev) && isPrime(num)){
+                System.out.println(num);
+                count++;
+            }
+            num++;
+        }
+    }
+    static boolean isPrime(int x){
+        if(x<2)
+            return false;
+        for(int i=2;i*i<=x;i++)
+            if(x%i==0)
+                return false;
+        return true;
+    }
+}
+
+7.import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int count = 0;
+        for (int i = 5; i <= n; i=i* 5) {
+            count =count+ n / i;
+        }
+        System.out.println(count);
+    }
+}
+
+8.
