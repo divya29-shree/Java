@@ -8,3 +8,59 @@ public class Sum {
 	}
 }
 
+package Day1;
+public class Character {
+	public static void main(String[] args) {
+		char ch='a';
+	    char ch1='b';
+	     System.out.println(ch+ch1);
+	}
+}
+
+package Day1;
+public class Floattointeger {
+	public static void main(String[] args) {
+		float num2=7.7f;
+		int num3=(int)num2;
+		System.out.println(num3);
+	}
+}
+
+
+package Day1;
+public class Integertofloat {
+	public static void main(String[] args) {
+		int num=5;
+        float num1=num;
+        System.out.println(num1);       
+	}
+}
+
+
+package Day1;
+public class Unary {
+	public static void main(String[] args) {
+		int a=5,b=6;
+		System.out.println(a++ + ++a);
+		System.out.println(a++ - --a);
+		System.out.println(b++ - a);
+	}
+}
+
+
+package Day1;
+public class Unary1 {
+	public static void main(String[] args) {
+		 int a=5,b=6;
+		 System.out.println(++a);
+		 System.out.println(a);
+		 System.out.println(a++);
+		 System.out.println(a);
+		 System.out.println(++b);
+		 System.out.println(b);
+		 System.out.println(b++);
+		 System.out.println(b);
+	}
+}
+
+
