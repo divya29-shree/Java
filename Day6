@@ -30,9 +30,9 @@ public class array2d {
 			for(int j=0;j<c;j++) {
 				System.out.println(arr[i][j] + " ");
 			}
+            System.out.println();
 		}
-         System.out.println();
-	}
+    }
 }
 Snake array matrix:
 package Day6;
