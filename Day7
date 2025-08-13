@@ -1,0 +1,125 @@
+String methods
+
+package Day7;
+import java.lang.String;
+public class String1 {
+
+	public static void main(String[] args) {
+		String str="Divya";
+		String str1="Shree";
+		String str2=" CSE B";
+		String str3="Shree";
+		System.out.println(str==str1);
+		System.out.println(str1.equals(str3));
+		System.out.println(str.length());
+		System.out.println(str2.trim().length());
+		System.out.println(str.substring(0,3));
+		System.out.println(str1.contains("ree"));
+		System.out.println(str1.contains("ra"));
+		System.out.println(str.startsWith("d"));
+		System.out.println(str2.endsWith("B"));
+		System.out.println(str.charAt(2));
+		System.out.println(str.concat("shree"));
+		String word[]=str2.split(" ");
+				for(String var:word)
+				{
+					System.out.println(var);
+					
+				}
+		System.out.println(str.toUpperCase());
+		System.out.println(str1.toUpperCase());
+		System.out.println(str2.toLowerCase());
+		
+		StringBuffer sb=new StringBuffer("Hello");
+		System.out.println(sb);
+		sb.append(",World");
+		System.out.println(sb);
+		sb.insert(5," to java");
+		System.out.println(sb);
+		sb.delete(0, 5);
+		System.out.println(sb);
+		sb.reverse();
+		System.out.println(sb);
+		sb.replace(11,12, "to");
+		System.out.println(sb);
+		
+	}
+}
+
+Reverse String
+
+package Day7;
+import java.lang.*;
+public class reversestring {
+
+	public static void main(String[] args) {
+		StringBuffer sb=new StringBuffer("Hello");
+		System.out.println(sb);
+		sb.append(" ,World");
+		System.out.println(sb);
+		sb.reverse();
+		System.out.println(sb);
+		String str=sb.toString();
+		String word[]=str.split(" ");
+		for(String var:word) {
+			System.out.println(var);
+		}
+	}
+
+}
+
+Assignment:1
+Without inbuilt method
+
+package Assignment7;
+import java.util.*;
+public class Inbuiltcase {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a character:");
+        String str = sc.nextLine();
+        String res="";
+        for (int i = 0; i <str.length();i++)
+        {
+            char c = str.charAt(i);
+            if (c>= 'A' && c<= 'Z') {
+                c = (char) (c+ 32); 
+            }
+            else if(c >='a' && c<='z') {
+            	   c=(char)(c-32);
+            }
+            res=res+c;
+        }
+        System.out.println("Converted character:"+res);
+	}
+}
+
+Toggle case
+
+package Assignment7;
+import java.util.Scanner;
+public class Togglecase {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String res = "";
+        for (int i = 0; i < str.length(); i++) 
+        {
+            char c = str.charAt(i);
+            if (Character.isUpperCase(c))
+            {
+                res += Character.toLowerCase(c);
+            } 
+            else if (Character.isLowerCase(c))
+            {
+                res += Character.toUpperCase(c);
+            } 
+            else 
+            {
+                res += c; 
+            }
+        }
+           System.out.println(res);
+    }
+}
+
