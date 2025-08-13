@@ -115,3 +115,32 @@ public class Constructor1
 		System.out.println(obj.name);
 	}
 }
+
+5.Constructor overloading
+
+package Day8;
+public class Constructor1 
+{
+	int age;
+	String name;
+	 Constructor1()
+	{
+		System.out.println("Hi");
+	}
+	 Constructor1(int age,String name)
+	 {
+		this.age=age;
+		this.name=name;
+		System.out.println(age+" "+name);
+	 }
+	 Constructor1(float b){
+		 System.out.println(b);
+	 }
+	public static void main(String[] args) 
+	{
+		Constructor1 obj=new Constructor1(7.8f);     //constructor overloading
+		Constructor1 obj1=new Constructor1(7,"divya"); 
+		System.out.println(obj.age);
+		System.out.println(obj.name);
+	}
+}
