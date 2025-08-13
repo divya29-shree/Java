@@ -1,0 +1,117 @@
+Static variable,method,block in one code
+
+package Day8;
+public class Staticmethod {
+	int rollno=30;
+	String name="Divya";
+	static String collegename="Mount Zion";   //static keyword
+	void display(int a,String name) {
+		System.out.println(a+ " "+ name+ " "+collegename);
+	}
+	static {
+		System.out.print("Mount Zion");//static block
+	}
+	public static void dis(int d) {
+  	  Staticmethod.collegename="Mount zion college"; //static variable
+  	  System.out.println(d);
+    }
+	public static void main(String[] args) {
+		Staticmethod obj=new Staticmethod();
+		System.out.println(obj.name);
+		System.out.println(obj.rollno);
+		System.out.println(Staticmethod.collegename);
+		Staticmethod.collegename="Mount Zion College of engineering and Technology";
+		obj.display(30, "Divya");
+		obj.display(52, "Kajol");
+		obj.display(14, "Bharathi");
+		obj.display(34, "Guna");
+		System.out.println("Mount zion is a best college in the universe");
+		Staticmethod.dis(30);
+	}
+}
+
+	
+2.Employeee 
+package Day8;
+public class Employee {
+          int id=30;
+          float salary=50000;
+          String name="Vishwa";
+          static String branch="cybersecurity";
+//          void dis(int d,String name) {
+//        	       System.out.println(d+" "+name+" "+salary+" "+branch); // concrete method
+//          }
+          public static void emp(int d) {
+        	  Employee.branch="cyber security and web development";
+        	  System.out.println(d+ " "+branch);
+          }
+	public static void main(String[] args) {
+//		Employee obj=new Employee();
+//		System.out.println(obj.id);
+//		System.out.println(obj.name);
+//		System.out.println(obj.salary);
+//		System.out.println(Employee.branch);
+//		obj.dis(30, "Vishwa");
+//		obj.dis(31, "Vijay");
+//		obj.dis(32, "Vishnu");
+		Employee .emp(30);
+	}
+}
+3.Work-Trip
+
+package Day8;
+public class Trip {
+	    int mem=15;
+	    int days=10;
+	    String place="Hogenakkal";
+	    String resort="Heaven world";
+	    float price=10000;
+	public static void main(String[] args) {
+		Trip obj=new Trip();
+		Trip obj1=new Trip();
+		System.out.println(obj.place);
+		obj1.place="Hebbe";
+		System.out.println(obj.resort);
+		System.out.println(obj.price);
+		System.out.println( obj1.place);
+		obj1.resort="Jollyoh Jymkana";
+		System.out.println( obj1.resort);
+		obj1.price=5000;
+		System.out.println( obj1.price);
+		obj.place="Hogwarts";
+		System.out.println(obj.place);
+		obj.resort="Harry's Magic World";
+		System.out.println(obj.resort);
+		obj1.price=25000;
+		System.out.println(obj1.price);
+	}
+}
+
+4.Constructor
+
+package Day8;
+public class Constructor1 
+{
+	int age=20;
+	String name="Divya";
+	 void Constructor1()
+	{
+		System.out.println("Hi");
+	}
+	 void Constructor1(int a,String str)
+	 {
+		age=a;
+		name=str;
+	 }
+	 void display()
+	 {
+		 System.out.println(age+" "+name);
+	 }
+	public static void main(String[] args) 
+	{
+		Constructor1 obj=new Constructor1();
+		obj.display();
+		System.out.println(obj.age);
+		System.out.println(obj.name);
+	}
+}
