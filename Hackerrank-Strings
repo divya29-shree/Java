@@ -1,0 +1,87 @@
+1.import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+       String str=sc.nextLine();
+        System.out.println("The magic within the string is " +str);
+    }
+}
+
+2.import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        System.out.println("The cosmic resonance of your phrase unfolds: " +str);
+    }
+}
+
+3. import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        System.out.println("Quantum revelation! The quantum length of " +str +" is " +str.length() +".");   }
+}
+
+4.  import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+         String str1=sc.nextLine();
+        if(str.equals(str1)){
+            System.out.println("Celestial Confirmation! The strings align.");
+        } else{
+            System.out.println("Galactic Discrepancy! The strings do not align.");
+        }
+    }    
+}
+
+5.  import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.nextLine();
+        String str2=sc.nextLine();
+        System.out.println("Friendship Rekindled! The concatenated string is "+str1+str2 +".");       
+    }
+}
+
+6.  import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        System.out.println("Word Ascension Achieved! Behold the majestic transformation: " +str.toUpperCase() +".");
+    }
+}
+
+7.  import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        String res="";
+        for(int i=0;i<str.length();i++){
+            char c=str.charAt(i);
+            if(Character.isUpperCase(c)){
+                res+=Character.toLowerCase(c);
+            }
+            else if(Character.isLowerCase(c)){
+                res+=Character.toUpperCase(c);
+            }
+            else{
+                res+=c;
+            }
+       }
+        System.out.println("Case Cascade Magic Unleashed! The " +res+ " transformation is complete.");
+} 
+}
