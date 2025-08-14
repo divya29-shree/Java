@@ -1,0 +1,237 @@
+1. import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        int max=arr[0];
+        for(int i=0;i<arr.length;i++) {
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<arr.length;i++) {
+             if(arr[i]>max) {
+                 max=arr[i];
+             }
+        } 
+        System.out.println(max+ " is the maximum element in the array ");
+    }
+}
+
+2.  import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr1[]=new int[size];
+        int arr2[]=new int[size];
+        int sum=0;
+        for(int i=0;i<size;i++){
+            arr1[i]=sc.nextInt();
+        }for(int i=0;i<size;i++){
+            arr2[i]=sc.nextInt();
+        } for(int i=0;i<size;i++){
+             sum =arr1[i]+arr2[i];
+            System.out.print(sum + " ");
+        }
+3. import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        int arr1[]=new int[size];
+        int sum=0;
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int j=0;j<size;j++){
+            arr1[j]=sc.nextInt(); 
+        } 
+        for(int i=0;i<size;i++){
+        if(arr[i]>arr1[i] || arr[i]==arr1[i]){
+            sum++;}
+        }
+            if(sum==size){
+                System.out.print("Compatibility Achieved!");
+        }else {
+            System.out.print("Incompatibility Detected!");
+        }       
+    }  
+}
+
+4. import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        int count=0;
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        int l=sc.nextInt();
+        for(int i=0;i<size;i++){
+            
+            if(l==arr[i]){
+                count++;
+            } 
+        }if(count==1){
+            System.out.println("Elusive Artifact Found!");
+        }
+        else{
+                System.out.println("Elusive Artifact Not Found!");
+            }
+        
+        
+    }
+}
+
+5.import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        int count=0;
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        } 
+        for(int i=0;i<size-1;i++){
+            if(arr[i]==arr[i+1]){
+                count++;
+                
+            }
+        }
+        int temp=size-count;
+        System.out.println(temp);
+    
+    }
+}
+
+6.import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        int sum=0;
+        int count=0;
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+           for(int i=0;i<size;i++){
+             if(arr[i]%2!=0){
+                 count++;
+             }
+               else{
+                    sum +=arr[i];
+               }
+         } if(count==size){
+             System.out.println("Sorry Pappu, no Diary Milk this time. There are no even numbers in the array.");
+         }else{
+        System.out.println("Pappu, the Diary Milk is yours! The sum of even numbers in the array is " +sum + ".");
+           }
+    }  
+}
+
+7. import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        int sum=0;
+        int sum1=0;
+        int sum2=0;
+        int count=0;
+        System.out.println("Victory in the Number Quest Duel!");
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        } for(int i=0;i<size;i++){
+            if(arr[i]%2==0){
+                sum1+=arr[i];
+            }else{
+                sum2+=arr[i];
+            }
+        } if(sum1>=0||sum2>=0){
+                    System.out.println("Sum of even numbers: " + sum1 + ".");
+    
+                System.out.println("Sum of odd numbers: " +sum2 + ".");
+            
+        }
+        
+    }
+}
+
+8.  import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        int arr1[]=new int[size];
+        int n=0;
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        } for(int j=0;j<size;j++){
+            arr1[j]=sc.nextInt();
+            
+        } for(int i=0;i<size;i++){
+           if(arr[i] == arr1[i]){ 
+           n++;
+        }
+        }if(n==size){
+                System.out.println("Match Found!");
+            } else{
+                System.out.println("No Match Found!");
+            }
+    }
+}
+
+9.  import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+         Scanner sc=new Scanner(System.in);
+         int size=sc.nextInt();
+        int arr[]=new int[size];
+              float num=0;
+        System.out.println("Quantum Mean Calculation Completed:");
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+            num+=arr[i];    
+        } float r=num/size;
+            System.out.println("The quantum mean of the array is " +r + "0");
+                System.out.println("Congratulations, Quantum Explorer!");
+        } 
+    }
+
+10.  import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+       
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        } 
+         System.out.println("Array after deletion is ");
+        int pos=sc.nextInt();
+        for(int i=0;i<size;i++){
+            if(i!= pos-1){
+                System.out.println(arr[i]);
+            }
+        }
+    }
+}
+}
