@@ -1,0 +1,267 @@
+Method Overloading
+
+package Day10;
+public class Overloadingeg {
+	public static int mul(int a,int b) {
+		return a*b;
+	}
+	public static int mul(int a,int b,int c) {
+		return a*b*c;
+		
+	}
+	public static void main(String[] args) {
+		System.out.println(mul(10,20));
+		System.out.println(mul(1,2,3));
+//		System.out.println(mul(1,2,3,4)); //overloading 
+	}
+}
+
+Constructor Overloading
+
+//just an example cant print any statements
+package Day10;
+class College{
+	int age;
+	String name;
+	double GPA;
+	int marks;
+	College(int age){
+		this.age=age;
+	}
+	College(int age,String name){
+		this.age=age;
+		this.name=name;
+	} 
+	College(int age,String name,double GPA){
+		this.age=age;
+		this.name=name;
+		this.GPA=GPA;
+	}
+	College(int age,String name,double GPA,int marks){
+		this.age=age;
+		this.name=name;
+		this.GPA=GPA;
+		this.marks=marks;
+	}
+      public void display() {                         //used to display the values.
+    	      System.out.println(age);
+    	      System.out.println(name);
+    	      System.out.println(GPA);
+    	      System.out.println(marks);
+    	      
+      }
+}
+public class Constoverloading {
+	public static void main(String[] args) {
+		new College(20).display();                         //.display used to display the values by calling display method inside.
+		new College(20,"shree").display();
+		new College(20,"shree",9.20).display();
+		new College(20,"shree",9.20,95).display();
+	}
+}
+
+this() used program
+
+package Day10;
+class College{
+	int age;
+	String name;
+	double GPA;
+	int marks;
+	College(int age){
+		this.age=age;
+	}
+	College(int age,String name){
+		this(age);
+//		this.age=age;
+		this.name=name; 
+	} 
+	College(int age,String name,double GPA){
+		this(age,name);
+//		this.age=age;
+//		this.name=name;
+		this.GPA=GPA;
+	}
+	College(int age,String name,double GPA,int marks){
+		this(age,name,GPA);                          //this()used
+//		this.age=age;
+//		this.name=name;
+//		this.GPA=GPA;
+		this.marks=marks;
+	}
+      public void display() {                         //used to display the values.
+    	      System.out.println(age);
+    	      System.out.println(name);
+    	      System.out.println(GPA);
+    	      System.out.println(marks);
+    	      
+      }
+}
+public class Constoverloading {
+	public static void main(String[] args) {
+		new College(20);                        
+		new College(20,"shree");
+		new College(20,"shree",9.20);
+		new College(20,"shree",9.20,95).display();      //.display used to display the values by calling display method inside.
+	}
+}
+
+Overriding program
+
+package Day10;
+class Animal{
+	void sound() {
+		System.out.println("Animal sound");
+	}
+}
+class Cat extends Animal{
+	@Override
+	void sound() {
+		System.out.println("meowwwwww");
+	}
+}
+class Dog extends Animal{
+	@Override
+	void sound() {
+		System.out.println("wowwwoowww");
+	}
+}
+public class Overrideeg {
+	public static void main(String[] args) {
+		Animal c=new Cat();
+		c .sound();
+		Animal d=new Dog();
+		d.sound();
+	}
+}
+
+Encapsulation(DataHiding)
+
+package Day10;
+class Person{
+	private String name;
+	public void SetName(String name) {
+		this.name=name;
+	}
+	public String getName() {
+		return name;
+		
+	}
+}
+public class Encapsulation {
+	public static void main(String[] args) {
+		Person p=new Person();
+		p.SetName("Shiva");
+		System.out.println(p.getName());
+	}
+}
+
+Variable arguments
+
+package Day10;
+//public class Foreach {
+//	public static void add(int...m) {
+//		for(int n:m) {
+//			System.out.println(n);
+//		}
+//	}
+//	public static void main(String[] args) {
+//		add(10);
+//		add(10,20);
+//		add(10,20,30);
+//		add(10,20,30,40);
+//	}
+//}
+//class B{
+//	int id;
+//	public B(int id) {
+//		this.id=id;
+//	}
+//	public B(B b) {
+//		this.id=b.id;
+//	} 
+//}
+//public class Foreach{
+//	public static void main(String args[]) {
+//		B obj=new B(29);
+//		B obj1=new B(obj);
+//		System.out.println(obj.id);
+//		System.out.println(obj1.id);
+//		
+//	}
+//}\
+
+Block program
+
+public class Foreach{
+	{
+		System.out.println("Non-static block running");
+	}
+	static {
+		System.out.println("static block running");
+	}
+public static void main(String args[]) {
+	System.out.println("Main start");
+	new Foreach();
+	System.out.println("Main end");
+	new Foreach();
+}
+}
+
+Output formal reference program
+
+public class Foreach{
+	{
+		System.out.println("Non-static block running");
+	}
+	Foreach(){
+		System.out.println("Constructor");
+	}
+	static {
+		System.out.println("static block running");
+	}
+public static void main(String args[]) {
+	System.out.println("Main start");
+	new Foreach();
+	System.out.println("Main end");
+	new Foreach();
+}
+{
+	System.out.println("Non-static-2");
+}
+static {
+	System.out.println("static-2");
+}
+}
+// output will print in order as 1st static block 2nd non static block  at final constructor will print 
+
+This() using super keyword
+
+package Day10;
+class Vehicle{
+	int model;
+	Vehicle(){
+		System.out.println("Vehicle constructor");
+	}
+	Vehicle(int model){
+		this.model=model;
+	}
+}
+class Van extends Vehicle{
+	Van(){
+		super();
+		System.out.println(" ");
+	}
+}
+class Bike extends Vehicle{
+	Bike(int model){
+		super(10);
+		this.model=model;
+	}
+}
+public class Thisof {
+	public static void main(String[] args) {
+		new Van();
+		new Bike(10);
+	}
+}
