@@ -1,0 +1,91 @@
+Abstarct Example
+
+//package Day9;
+//abstract class Bike
+//{
+//	abstract void run();         // no object can be created in abstarct class.
+//}
+//class Royal extends Bike{
+//	 void run()                    //use method which in ab class
+//	 {
+//		 System.out.println("vehicle");
+//	 }
+//	 void display() {                   //this method can accessed using Royal in public class.
+//		 System.out.println("Showroom");
+//	 }
+//}
+//
+//
+//public class Abstract1 {
+//	
+//
+//	public static void main(String[] args) {
+//		Bike obj=new Royal();                  // bike is a refernce variable and Royal is the sub class
+//		obj.run();
+//		Royal obj1=new Royal();                // can create obj for subclass . cannot create object for abstract class.
+//		obj1.display();
+//	}
+//
+//}
+
+Interface Example
+
+package Day9;
+interface Bike{                     //interface sum
+	void ride();                   //int max=100;
+	default void run() {                    //void show();
+		System.out.println("Riding");        //static void display(){
+	}                                               //s.o.p("displaying");
+	static void skit() {
+		System.out.println("Skitting");
+	}
+}
+class Honda implements Bike                    //class Myclass implements sum{
+{                                                         //public void show(){
+	public void ride() {                                         //s.o.p("showing");
+		System.out.println("Noise");
+	}
+	public void stop() {
+		System.out.println("Stopped");
+	}
+}
+public class Interface {
+	public static void main(String[] args) {
+		Bike obj=new Honda();                         //sum.display();
+		obj.ride();                                    //My class obj=new My class();
+		Honda obj1=new Honda();                             //2 obj.show();
+		obj1.stop();
+	}
+
+}
+
+Super Keyword Program
+
+package Day9;
+class Animal{
+	String color="Brown";
+}
+class Bird{
+	String color="White";
+	void fly()
+	{
+		System.out.println("Flying");
+	}
+}
+class Cat extends Animal{
+	void sit() {
+		System.out.println("Sitting");
+	}
+	void display()
+	{
+		 System.out.println(color);
+		 System.out.println(super.color);
+}
+}
+public class Superpro {
+	public static void main(String[] args) {
+		Cat obj=new Cat();
+		obj.display();
+	}
+
+}
